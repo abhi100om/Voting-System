@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow space-y-6">
+
+        <!-- Navigation -->
+        <nav class="bg-white p-4 rounded shadow mb-6 text-center space-x-6">
+            <a href="/" class="text-blue-600 hover:underline font-medium">Home</a>
+            <a href="/admin" class="text-blue-600 hover:underline font-medium">Admin</a>
+            <a href="/results" class="text-blue-600 hover:underline font-medium">Results</a>
+        </nav>
+
+        <h1 class="text-3xl font-bold text-center text-blue-700">Admin Panel</h1>
+
+        <!-- Add Candidate Form -->
+        <div class="space-y-4">
+            <h2 class="text-xl font-semibold border-b pb-2">Add Candidate</h2>
+            <form method="POST" action="/add_candidate" class="space-y-4">
+                <div>
+                    <label for="name" class="block font-medium">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="johnwick"
+                           class="w-full border border-gray-300 rounded px-3 py-2">
+                </div>
+                <div>
+                    <label for="party" class="block font-medium">Party:</label>
+                    <input type="text" id="party" name="party" placeholder="bip"
+                           class="w-full border border-gray-300 rounded px-3 py-2">
+                </div>
+                <button type="submit"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    Add Candidate
+                </button>
+            </form>
+        </div>
+
+        <!-- Set Dates Form -->
+        <div class="space-y-4">
+            <h2 class="text-xl font-semibold border-b pb-2">Define Voting Dates</h2>
+            <form method="POST" action="/set_dates" class="space-y-4">
+                <div class="flex gap-4">
+                    <div class="flex-1">
+                        <label class="block font-medium">Start date:</label>
+                        <input type="date" name="start_date"
+                               value="{{ voting_start.strftime('%Y-%m-%d') }}"
+                               class="w-full border border-gray-300 rounded px-3 py-2">
+                    </div>
+                    <div class="flex-1">
+                        <label class="block font-medium">End date:</label>
+                        <input type="date" name="end_date"
+                               value="{{ voting_end.strftime('%Y-%m-%d') }}"
+                               class="w-full border border-gray-300 rounded px-3 py-2">
+                    </div>
+                </div>
+                <button type="submit"
+                        class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                    Define Voting Dates
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

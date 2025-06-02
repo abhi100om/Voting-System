@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow space-y-6">
+        <!-- Navigation -->
+        <nav class="bg-white p-4 rounded shadow text-center space-x-6">
+            <a href="/" class="text-blue-600 hover:underline font-medium">Home</a>
+            <a href="/admin" class="text-blue-600 hover:underline font-medium">Admin</a>
+            <a href="/results" class="text-blue-600 hover:underline font-medium">Results</a>
+        </nav>
+
+        <!-- Header -->
+        <h1 class="text-3xl font-bold text-center text-blue-700">Voting Results</h1>
+
+        <!-- Results List -->
+        <ul class="divide-y divide-gray-200">
+            {% for result in results %}
+                <li class="py-3 px-2 text-gray-700">{{ result }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
