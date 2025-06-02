@@ -11,16 +11,6 @@ A secure and tamper-proof voting platform built using **Flask**, a **Python-base
 - 🧾 **Audit Trail** — Internal log of system events.
 - 🌐 **Simple UI** — Clean and responsive interface with Tailwind CSS.
 
-## 🏗️ Project Structure
-
-blockchain-voting-system/
-├── app.py                 # Flask app with voting and blockchain logic
-├── Voting.sol             # Solidity smart contract (future use)
-├── templates/
-│   ├── index.html         # Voter-facing home page (to be created)
-│   ├── admin.html         # Admin dashboard
-│   └── results.html       # Live results page
-└── README.md              # Project documentation
 
 ## 🧠 Technologies Used
 
@@ -42,29 +32,29 @@ blockchain-voting-system/
 ## 🛠️ Setup Instructions
 
 ### 1. Install Python
-
-- [Python Download](https://www.python.org/downloads/)
-
+```
+- 📥 [Download Python]
+```
 ### 2. Clone This Repository
 
-git clone https://github.com/your-username/blockchain-voting-system.git
+```bash
+git clone https://github.com/abhi100om/blockchain-voting-system.git
 cd blockchain-voting-system
-
+```
 ### 3. Install Dependencies
-
+```
 pip install flask requests
-
+```
 ### 4. Run the Application
-
+```
 python app.py
-
+```
 App will start on `http://localhost:5000`.
-
 ### 5. Access the Frontend
-
+```
 Open your browser and navigate to:
 http://localhost:5000
-
+```
 ## 📊 Admin Dashboard
 
 - URL: `/admin`
